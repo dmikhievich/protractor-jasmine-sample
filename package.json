@@ -1,0 +1,16 @@
+{
+  "name": "protractor-test-sample",
+  "version": "0.0.1",
+  "description": "Some sample protractor project",
+  "main": "config.js",
+  "scripts": {
+    "test": "protractor config.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "protractor": "3.0.0",
+    "jasmine-reporters": "^2.0.0",
+    "protractor-jasmine2-html-reporter": "0.0.5"
+  }
+}
