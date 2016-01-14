@@ -39,8 +39,6 @@ exports.config = {
 
         var Jasmine2HtmlReporter = require('protractor-jasmine2-html-reporter');
 
-        var CustomReporter = require('./utils/custom-reporter');
-
         jasmine.getEnv().addReporter(
             new Jasmine2HtmlReporter({
                 savePath: './reports/',
@@ -49,6 +47,14 @@ exports.config = {
                 //takeScreenshotsOnlyOnFailures: true
             })
         );
+
+        var jasmineReporters = require('jasmine-reporters');
+
+        jasmine.getEnv().addReporter(
+            new jasmineReporters.TeamCityReporter()
+        );
+
+        var CustomReporter = require('./utils/custom-reporter');
 
         jasmine.getEnv().addReporter(
             new CustomReporter()
