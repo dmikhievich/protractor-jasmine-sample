@@ -2,26 +2,26 @@ exports.config = {
 
     baseUrl: "https://angularjs.org",
 
-    seleniumAddress: "http://192.168.99.100:32768/wd/hub",
+    seleniumAddress: "http://52.35.224.26:32768/wd/hub",
 
     framework: 'jasmine2',
 
     multiCapabilities: [
         {
-            browserName: 'chrome',
-            shardTestFiles: 'true',
-            maxInstances: 2
+            browserName: 'chrome'
+            //shardTestFiles: 'true',
+            //maxInstances: 2
         },
+        //{
+        //    browserName: 'internet explorer',
+        //    'nativeEvents': false,
+        //    shardTestFiles: 'true',
+        //    maxInstances: 2
+        //},
         {
-            browserName: 'internet explorer',
-            'nativeEvents': false,
-            shardTestFiles: 'true',
-            maxInstances: 2
-        },
-        {
-            browserName: 'firefox',
-            shardTestFiles: 'true',
-            maxInstances: 2
+            browserName: 'firefox'
+            //shardTestFiles: 'true',
+            //maxInstances: 2
         }
     ],
 
